@@ -32,7 +32,7 @@ function setup() {
         label: "True π",
         data: [], // array of {x, y: Math.PI}
         borderColor: "red",
-        borderDash: [2, 5],
+        borderDash: [5, 5],
         pointRadius: 0,
         showLine: true,
         fill: false
@@ -51,10 +51,10 @@ function setup() {
         },
         y: {
           min: 2.5,
-          max: 4,
+          max: 3.5,
           title: {
             display: true,
-            text: 'Estimated π'
+            text: 'Estimated \({\pi}\)'
           }
         }
       }
@@ -102,7 +102,7 @@ function draw() {
       chart.options.scales.x.max = xMax;
 
       chart.data.datasets[0].data.push({ x: total, y: pi });       // π estimate
-      chart.data.datasets[1].data.push({ x: total, y: Math.PI });  // flat π line
+      chart.data.datasets[1].data.push({ x: total, y: Math.PI });  // flat pi line
 
       chart.update();
     }
